@@ -19,7 +19,7 @@ export default function Categories() {
             <Text>Luxe</Text>
           </Flex>
           <Flex style={{ backgroundColor: "pink", borderRadius: "20px" }}>
-            <Text>Bestsellers</Text>
+            <Text>Bestseller</Text>
           </Flex>
           <Flex style={{ backgroundColor: "pink", borderRadius: "20px" }}>
             <Text>Makeup</Text>
