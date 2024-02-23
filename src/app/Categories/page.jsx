@@ -1,13 +1,28 @@
 'use client';
 
-import { Typography, Button, Flex, Divider, Input, Dropdown, Avatar, Carousel } from 'antd';
+import { 
+  Typography, 
+  Button, 
+  Flex, 
+  Divider, 
+  Input, 
+  Dropdown, 
+  Avatar, 
+  Carousel 
+} from 'antd';
 const { Text } = Typography;
 
 export default function Categories() {
   return (
     <Flex justify='space-between'>
       <Flex gap={40} vertical>
-        <Text style={{ fontWeight: "bold", marginTop: "30px", fontSize: "20px" }}> Shop </Text>
+        <Text style={{
+           fontWeight: "bold", 
+           marginTop: "30px", 
+           fontSize: "20px" 
+           }}
+           > Shop 
+           </Text>
         <Flex vertical gap={24}>
           <Flex align='center' justify='space-between' style={{ backgroundColor: "pink", borderRadius: "20px", height: "50px", width: "500px", }}>
             <Text style={{ marginLeft: "8px", fontSize: "16px" }}> Brands </Text>

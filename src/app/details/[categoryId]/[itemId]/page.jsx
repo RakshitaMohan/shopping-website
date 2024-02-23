@@ -4,13 +4,16 @@ import womenData from '../../../data/women/data';
 import kidsData from '../../../data/kids/data';
 import { Flex, Typography, Button, Input, Divider } from 'antd';
 import {
-   HeartOutlined, 
+   HeartFilled, 
    StarOutlined, 
    EnvironmentOutlined, 
-   RightOutlined 
+   RightOutlined,
+   HeartOutlined, 
   } from '@ant-design/icons';
 
 const { Text } = Typography;
+
+import { useState } from 'react';
 
 const detailsMap = {
   men: menData,
@@ -23,6 +26,12 @@ export default function Page({ params }) {
 
   let itemDetails = detailsMap[categoryId].find((item) => item.id === itemId);
 
+  const [wishlist, setWishlist]= useState(null);
+
+  const handleWishlist = () => {
+    setWishlist(!wishlist)
+  }
+
 
   return (
     <Flex style={{marginTop:"50px"}} >
@@ -32,8 +41,36 @@ export default function Page({ params }) {
         border:"0.5px solid grey", 
         marginLeft:"70px"}}>
           <Flex align='flex-start'>
-             <img style={{height:"400px", width:"400px", marginLeft:"52px", marginTop:"16px"}} src={itemDetails.pictures}  />
-             <HeartOutlined style={{color:"black", fontSize:"24px", marginTop: '32px', marginLeft:"32px"}} />
+             <img style={{
+              height:"400px", 
+              width:"400px", 
+              marginLeft:"52px", 
+              marginTop:"16px"
+              }} 
+              src={itemDetails.pictures}  
+             />
+             {
+              wishlist ? 
+              <HeartFilled 
+                style={{
+                  color:"black", 
+                  fontSize:"24px", 
+                  marginTop: '32px', 
+                  marginLeft:"32px",
+                  color: 'red',
+                  }} 
+                  onClick={handleWishlist}
+                /> : 
+                <HeartOutlined
+                  style={{
+                    color:"black", 
+                    fontSize:"24px", 
+                    marginTop: '32px', 
+                    marginLeft:"32px",
+                  }} 
+                 onClick={handleWishlist}
+                />
+             }
           </Flex>
      
       </Flex>

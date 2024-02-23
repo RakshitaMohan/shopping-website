@@ -13,7 +13,7 @@ import {
 
 export default function SideContent() {
   return (
-    <Flex style={{ backgroundColor: "white", height: '100%' }}>
+    <Flex style={{ backgroundColor: "white", height: '100%', border:"0.5px solid grey" }}>
       <Flex vertical >
         <Flex vertical>
           <Text style={{ color: "purple", fontSize: "40px", margin: "35px 0 0 15px" }}>Shoppers</Text>
