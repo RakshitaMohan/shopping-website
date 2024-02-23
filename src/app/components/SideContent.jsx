@@ -16,7 +16,7 @@ export default function SideContent() {
     <Flex style={{ backgroundColor: "white", height: '100%' }}>
       <Flex vertical >
         <Flex vertical>
-          <Text style={{ color: "purple", fontSize: "40px", margin: "35px 0 0 15px" }}>Shopper World</Text>
+          <Text style={{ color: "purple", fontSize: "40px", margin: "35px 0 0 15px" }}>Shoppers</Text>
         </Flex>
         <Flex vertical align='flex-start'>
           <h1 style={{ fontWeight: "bold", fontSize: "35px", color: "black", margin: "20px 0 20px 15px" }}>Explore</h1>
